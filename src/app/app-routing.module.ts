@@ -1,7 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { SkeletonComponent } from './layout/skeleton/skeleton.component';
+import { components } from './shared/components';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+  path: '',
+  component: SkeletonComponent 
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {useHash : true} )],
