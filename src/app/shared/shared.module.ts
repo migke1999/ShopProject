@@ -6,9 +6,11 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
 
 import * as  fromComponents from './components';
+import { CardUserComponent } from './components/card/card-user/card-user.component';
+
 
 @NgModule({
-  declarations: [...fromComponents.components],
+  declarations: [...fromComponents.components, CardUserComponent],
   imports: [
     FormsModule,
     ReactiveFormsModule,
@@ -19,7 +21,8 @@ import * as  fromComponents from './components';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    ...fromComponents.components
   ]
 })
 export class SharedModule { }

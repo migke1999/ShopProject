@@ -1,12 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SkeletonComponent } from './layout/skeleton/skeleton.component';
-import { components } from './shared/components';
+
 
 const routes: Routes = [
   {
   path: '',
-  component: SkeletonComponent 
+  component: SkeletonComponent ,
+  children: [
+    {
+      path: '',
+      loadChildren: ()=>
+        import("./modules/user/user.module").then( (m) => m.UserModule)
+
+    }
+  ]
   }
 ];
 

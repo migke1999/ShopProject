@@ -1,0 +1,10 @@
+<div class="card" *ngIf="data">
+    <div class="card_image">
+        <img src="{{data.avatar}}" alt="imagen de perfil" >
+    </div>
+    <div class="card_info">
+        <h2>{{data.name}}</h2>
+        <h4>Edad: {{data.age}}</h4>
+        <p>{{data.description}}</p>
+    </div>
+</div>

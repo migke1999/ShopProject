@@ -28,7 +28,8 @@
       "@components/*":["app/shared/*"],
       "@env/*":["environment/*"],
       "@data/*":["app/data/*"],
-      "@layout":["app/layout/*"]
+      "@layout/*":["app/layout/*"],
+      "@modules/*":["app/modules/*"]
     }
   },
   "angularCompilerOptions": {
