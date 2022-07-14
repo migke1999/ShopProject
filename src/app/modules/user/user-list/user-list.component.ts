@@ -13,10 +13,11 @@ export class UserListComponent implements OnInit {
   };
   public users: ICardUser =
   {
-    name:'Octavio Herrera',
+    name:'Emma Stone',
     age: 1,
     description:'Cliente numero 1',
-    avatar: 'https://www.lavanguardia.com/files/content_image_mobile_filter/uploads/2016/11/12/5fa2fdbfcb617.jpeg'
+    avatar: 'https://www.lavanguardia.com/files/content_image_mobile_filter/uploads/2016/11/12/5fa2fdbfcb617.jpeg',
+    id: 1
 
   }
   constructor() { }
