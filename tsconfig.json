@@ -24,7 +24,7 @@
     ],
     "paths": {
       "@app/*": ["app/core/*"],
-      "@shared/*":["app/shared/*"],
+      "@sharedComponent/*":["app/shared/*"],
       "@components/*":["app/shared/*"],
       "@env/*":["environment/*"],
       "@data/*":["app/data/*"],

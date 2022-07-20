@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/data/services/api/user.service';
 import { ICardUser } from 'src/app/shared/components/card/card-user/card-user.metada';
 
 @Component({
@@ -11,18 +12,24 @@ export class UserListComponent implements OnInit {
     text: 'Lista de usuarios',
     type: 'primary' as const
   };
-  public users: ICardUser =
-  {
-    name:'Emma Stone',
-    age: 1,
-    description:'Cliente numero 1',
-    avatar: 'https://www.lavanguardia.com/files/content_image_mobile_filter/uploads/2016/11/12/5fa2fdbfcb617.jpeg',
-    id: 1
+  
+  public allUsers: ICardUser[] = []; 
 
+
+  public page!: number
+
+  constructor(private userService : UserService) {
+    console.log("hola mundo") 
+     userService.getAllUsers().subscribe( r => {
+      if(!r.error){
+        this.allUsers= r.data
+      }
+     })
   }
-  constructor() { }
 
   ngOnInit(): void {
+
+    
   }
 
 }

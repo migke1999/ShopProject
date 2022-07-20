@@ -1,10 +1,13 @@
-<div class="card" *ngIf="data" routerLink="/panel/user/{{data.id}}">
-    <div class="card_image">
-        <img src="{{data.avatar}}" alt="imagen de perfil" >
+<div class="card text-center" *ngIf="data" >
+    <div class="card-header">
+        {{data.lastname}}
     </div>
-    <div class="card_info">
-        <h2>{{data.name}}</h2>
-        <h4>Edad: {{data.age}}</h4>
-        <p>{{data.description}}</p>
+    <div class="card-body">
+      <h5 class="card-title">{{data.firstname}}</h5>
+      <p class="card-text">Correo: {{data.email}}</p>
+      <a class="btn btn-primary" routerLink="/panel/user/{{data.userid}}">más detalles</a>
     </div>
-</div>
+    <div class="card-footer text-muted">
+      2 days ago
+    </div>
+  </div>
